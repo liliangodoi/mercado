@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0; 
+        }
+
+        .topo{
+            width: 100%;
+            height: 100px;
+            background-color: aqua;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #fff;
+        }
+        .venda{
+            width: 100%;
+            height: 400px;
+            display: flex;
+            flex-direction: row;
+        }
+        .divs div{
+            width: 75px;
+            height: 50px;
+        }
+        #divs{
+            height: 250px;
+            width: 380px;
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .caixa img,.horizontal img,.circulo img{
+            width: 200px;
+        }
+        .venda{
+            display: flex;
+            justify-content: center;
+        }
+        .vendas{
+            display: flex;
+            flex-direction: column;
+            justify-content:space-between;
+            height: 100px;
+            margin-top: 20px;
+            margin-left: 20px;
+            font-size: 20px;
+        }
+        .painel{
+            margin-top:50px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        #selec{
+            position: relative;
+            right:645px;
+            bottom: 20px;
+            margin-bottom: 20px;
+        }
+        .tabela{
+            display: flex;
+            gap: 100px;
+        }
+        table td{  
+            border: 1px solid black;
+            width: 80px;
+            text-align: center;
+            background-color: antiquewhite;
+        }
+        .horizontal{
+            margin-left:150px;
+        }
+    </style>
+</head>
+<body>
+   
+        <div class="topo">
+            <h1>Painel de Vendas</h1>
+        </div>
+
+    <div class="painel">
+        
+        <div class="venda">
+            <div class="caixa">
+                <img src="caixa.jpg" alt="caixa de mercado" width="50px">
+            </div>
+            <div class="vendas"> 
+                <div><p>vendas</p></div>
+                <div><p>R$:404,00</p></div>
+            </div>
+
+            <div id="divs">
+                <div style="margin-left: 75px; border:2px solid black;width: 100px;height: 50px;text-align: center; padding-top:10px;">R$4.863,00</div>
+                <div style="margin-left: 75px; border:2px solid black;width: 100px;height: 50px;text-align: center; padding-top:10px;">34</div>
+                <div style="margin-left: 75px; border:2px solid black;width: 100px;height: 50px;text-align: center; padding-top:10px;">R$2.424,00</div>
+                <div style="margin-left: 75px; border:2px solid black;width: 100px;height: 50px;text-align: center; padding-top:10px;">50%</div>
+            </div>
+
+            <div class="horizontal">
+                <img src="horizontal.png" alt="grafico horizontal">
+            </div>
+        </div>
+
+        <select name="meses" id="selec">
+            <optgroup>
+                <option value="jan">Janeiro</option>
+                <option value="fev">fevereiro</option>
+                <option value="mar">março</option>
+                <option value="abri">abril</option>
+                <option value="mai">maio</option>
+                <option value="jun">junho</option>
+                <option value="jul">julho</option>
+                <option value="ago">agosto</option>
+                <option value="set">setembro</option>
+                <option value="out">outubro</option>
+                <option value="nov">novembro</option>
+                <option value="dez">dezembro</option>
+            </optgroup>
+        </select>
+        <div class="tabela">
+            <table>
+                <tr>
+                        <td style="opacity: 0;"></td>
+                        <td>janeiro</td>
+                        <td>fevereiro</td>
+                        <td>março</td>
+                        <td>abril</td>
+                        <td>maio</td>
+                        <td>junho</td>
+                        <td>julho</td>
+                        <td>agosto</td>
+                        <td>setembro</td>
+                        <td>outubro</td>
+                        <td>novembro</td>
+                        <td>dezembro</td>
+                </tr>
+                <tr>
+                        <td style="background-color: greenyellow;">Vendas</td>
+                        <td>--</td>
+                        <td>--</td>
+                        <td>--</td>
+                        <td>4.853,00</td>
+                        <td>64,00</td>
+                        <td>--</td>
+                        <td>--</td>
+                        <td>--</td>
+                        <td>--</td>
+                        <td>--</td>
+                        <td>--</td>
+                        <td>--</td>
+                </tr>
+                <tr>
+                        <td style="background-color: rgb(17, 168, 238);">Custo</td>
+                        <td>--</td>
+                        <td>--</td>
+                        <td>--</td>
+                        <td>2.439,00</td>
+                        <td>36,50</td>
+                        <td>--</td>
+                        <td>--</td>
+                        <td>--</td>
+                        <td>--</td>
+                        <td>--</td>
+                        <td>--</td>
+                        <td>--</td>
+                </tr>
+                <tr>
+                        <td  style="background-color: pink;">Margem</td>
+                        <td>--</td>
+                        <td>--</td>
+                        <td>--</td>
+                        <td>2.424,00</td>
+                        <td>27,50</td>
+                        <td>--</td>
+                        <td>--</td>
+                        <td>--</td>
+                        <td>--</td>
+                        <td>--</td>
+                        <td>--</td>
+                        <td>--</td>
+                </tr>
+            </table>
+            <div class="circulo">
+                <img src="grafico circular colorido.png" alt="grafico circular">
+            </div>
+        </div>
+
+    </div>
+    
+</body>
+</html>
